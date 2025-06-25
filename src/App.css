@@ -1,0 +1,147 @@
+.App {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.task {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-left: 5px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.task.reminder {
+  border-left: 5px solid green;
+  background-color: #e8ffe8;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+form input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+/* ===== Base styles for desktop & normal screens ===== */
+
+.App {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.task {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-left: 5px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.task.reminder {
+  border-left: 5px solid green;
+  background-color: #e8ffe8;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form input[type="text"],
+.react-datepicker-wrapper {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+form input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* ===== Mobile responsive styles below 600px width ===== */
+@media (max-width: 600px) {
+  .App {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .task {
+    padding: 12px 15px;
+  }
+
+  form input[type="submit"] {
+    width: 100%;
+    font-size: 16px;
+  }
+}
