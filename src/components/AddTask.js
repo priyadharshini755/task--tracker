@@ -15,8 +15,16 @@ const AddTask = ({ onAdd }) => {
       return;
     }
 
-    onAdd({ text, day: reminderTime.toLocaleString(), reminder });
+    // ✅ Add notified: false and time field
+    onAdd({
+      text,
+      day: reminderTime.toLocaleString(),
+      reminder,
+      time: reminderTime,
+      notified: false
+    });
 
+    // ✅ Reset form fields
     setText('');
     setReminderTime(new Date());
     setReminder(false);
@@ -33,17 +41,19 @@ const AddTask = ({ onAdd }) => {
           placeholder="Add task"
         />
       </div>
+
       <div>
         <label>Reminder Date & Time</label><br />
         <DatePicker
           selected={reminderTime}
           onChange={(date) => setReminderTime(date)}
           showTimeSelect
-          timeFormat="HH:mm"
+          timeFormat="hh:mm aa"
           timeIntervals={15}
           dateFormat="MMMM d, yyyy h:mm aa"
         />
       </div>
+
       <div>
         <label>
           <input
@@ -54,6 +64,7 @@ const AddTask = ({ onAdd }) => {
           Set Reminder
         </label>
       </div>
+
       <input type="submit" value="Save Task" />
     </form>
   );
